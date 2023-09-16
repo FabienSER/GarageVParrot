@@ -10,13 +10,19 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "HTML", "HTML", "{CF9F0D93-2
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Js", "Js", "{BC35AE61-1C8C-4F23-BC5B-DFAEFD1C3F61}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CSS", "CSS", "{BC92B893-5248-4E75-9908-E339CD6196F7}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "style", "style", "{BC92B893-5248-4E75-9908-E339CD6196F7}"
+	ProjectSection(SolutionItems) = preProject
+		Bouton.css = Bouton.css
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Composant", "Composant", "{3A3FC153-48E9-4CB3-B709-52949C2A132B}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ScriptApp", "ScriptApp", "{1604A32B-4A4F-4439-96E2-59552F04D4A2}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Composant_Primaire", "Composant_Primaire", "{08B418B3-4C7D-414E-84D3-171B4CEF0DB8}"
+	ProjectSection(SolutionItems) = preProject
+		Boutons.js = Boutons.js
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{507C379F-8CC5-47A1-B8D6-91CCD37D8EC2}"
 	ProjectSection(SolutionItems) = preProject
