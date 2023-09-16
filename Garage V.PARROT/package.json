@@ -1,0 +1,17 @@
+{
+  "name": "garage-v.parrot",
+  "version": "1.0.0",
+  "description": "package web site",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "SERRE Fabien",
+  "license": "ISC",
+  "dependencies": {
+    "@reduxjs/toolkit": "^1.9.5",
+    "axios": "^1.5.0",
+    "react-redux": "^8.1.2",
+    "styled-components": "^5.3.11"
+  }
+}

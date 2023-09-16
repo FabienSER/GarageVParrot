@@ -4,6 +4,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 16.0.28922.388
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "HTML", "HTML", "{CF9F0D93-2B40-4523-A2BB-BE102C4CB7B1}"
+	ProjectSection(SolutionItems) = preProject
+		Home.html = Home.html
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Js", "Js", "{BC35AE61-1C8C-4F23-BC5B-DFAEFD1C3F61}"
 EndProject
@@ -14,6 +17,13 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ScriptApp", "ScriptApp", "{1604A32B-4A4F-4439-96E2-59552F04D4A2}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Composant_Primaire", "Composant_Primaire", "{08B418B3-4C7D-414E-84D3-171B4CEF0DB8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{507C379F-8CC5-47A1-B8D6-91CCD37D8EC2}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+		package-lock.json = package-lock.json
+		package.json = package.json
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionProperties) = preSolution
