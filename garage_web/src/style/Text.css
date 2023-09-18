@@ -1,0 +1,82 @@
+.ligneContainer{
+	display : flex;
+	justify-content :left;
+    align-items: left;
+    flex-direction: row;
+    width:auto;
+    min-width: 200px;
+    text-align: left;
+    size:24px;
+    font-size: 24px;
+    color : #D94350;
+    margin : 10px;
+}
+
+.ligneRightContainer{
+	display : flex;
+	justify-content :left;
+    align-items: left;
+    flex-direction: row;
+    width:auto;
+    min-width: 200px;
+    text-align: right;
+    size:24px;
+    font-size: 24px;
+    color : #D94350;
+    margin : 10px;
+}
+
+.titreContainer{
+	display : flex;
+	justify-content :center;
+    text-align: center;
+    flex-direction: row;
+    width:50vw;
+    min-width: 250px;
+    text-align: left;
+    size:48px;
+    font-size: 48px;
+    color : #D94350;
+    margin : 10px;
+    margin-bottom: 20px;
+}
+
+.articleContainer{
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    height: auto;
+    align-items: center;
+    padding-right: 5vw;
+    padding-left: 5vw;
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+    background-color: #F2F2F2;
+    margin: 10px;
+    stroke: #D94350;
+    border-radius: 40px;
+    border-color: #D94350;
+    border-style: double;
+}
+
+.commentContainer{
+	display : flex;
+	justify-content :center;
+    text-align: center;
+    flex-direction: row;
+    width:50vw;
+    min-width: 200px;
+    text-align: left;
+    size:14px;
+    font-size: 12px;
+    color : #D94350;
+    margin : 10px;
+    margin-bottom: 20px;
+
+}
+
+.CellJour,.CellMatin,.CellAprem{
+    width: 10vw;
+    padding: 10px;
+    margin: 5px;
+}

@@ -1,5 +1,4 @@
-/*les dimension sont fourni par rapport à la taille de l'écran attention*/
-.ButtonContainer{
+.compteMenuContainer{    
 	display : flex;
 	justify-content : space-evenly;
     align-items: center;
@@ -13,5 +12,4 @@
     border-width: 3px;
 	height: 4vh ;
 	width :10vw ;
-    
 }

@@ -1,16 +1,29 @@
 import VenteButton from "./VenteButton";
 import MenuButton from "./CompteButton";
 import AvisButton from "./AvisButton";
+import { Menu } from 'react-ui';
+import "../style/MenuPrinc.css";
 
 export default function MenuPrinc({Direction, Format, Connect}){
-    if (Direction == 'Horizontal'){
+    if (Direction === "Horizontal"){
         return(
-            <div></div>
+            <div className="menuHContainer">
+                <AvisButton></AvisButton>
+                <VenteButton></VenteButton>
+                <MenuButton Connect={Connect}></MenuButton>
+            </div>
         );
     }
     else{
         return(
-            <div></div>
+            <Menu>
+                <Menu.Button>Menu</Menu.Button>
+                <Menu.List>
+                    <Menu.Item ><AvisButton/></Menu.Item>
+                    <Menu.Item ><VenteButton/></Menu.Item>
+                    <Menu.Item ><MenuButton/></Menu.Item>
+                </Menu.List>
+            </Menu>
         );
     }
 

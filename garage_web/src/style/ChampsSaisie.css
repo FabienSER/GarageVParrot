@@ -1,0 +1,36 @@
+.champsContainer{
+	display : flex;
+	justify-content :left;
+    align-items: left;
+    flex-direction: column;
+    width:auto;
+    min-width: 200px;
+    text-align: left;
+    size:1.3em;
+    font-size: 1.3em;
+    color : #D94350;
+    margin : 3px;
+}
+
+.labelContainer{
+    font-size: 1em;
+    color : #D94350;
+    margin : 3px;
+    font:bold;
+}
+.zoneContainer{
+    border-color:#D94350;    
+}
+.zoneSmallContainer{
+    width: 10vw;
+    min-width: 150px;
+    max-width: 300px;
+}
+.zoneLargeContainer{
+    width: 75vw;
+    height: 150px;
+}
+.zoneMediumContainer{
+    width: 75vw;
+    max-width: 600px;
+}
