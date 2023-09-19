@@ -11,6 +11,7 @@
 
 # production
 /build
+/atelier_garage/stock_piece
 
 # misc
 .DS_Store

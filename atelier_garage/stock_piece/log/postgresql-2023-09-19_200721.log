@@ -21,3 +21,13 @@
 2023-09-19 20:52:52.431 CEST [26740] LOG:  checkpoint complete: wrote 38 buffers (0.2%); 0 WAL file(s) added, 0 removed, 0 recycled; write=4.074 s, sync=0.030 s, total=4.116 s; sync files=36, longest=0.006 s, average=0.001 s; distance=148 kB, estimate=5347 kB; lsn=0/2397CB8, redo lsn=0/2397C80
 2023-09-19 20:57:48.447 CEST [26740] LOG:  début du checkpoint : time
 2023-09-19 20:57:49.575 CEST [26740] LOG:  checkpoint complete: wrote 11 buffers (0.1%); 0 WAL file(s) added, 0 removed, 0 recycled; write=1.101 s, sync=0.011 s, total=1.129 s; sync files=11, longest=0.002 s, average=0.001 s; distance=24 kB, estimate=4815 kB; lsn=0/239E060, redo lsn=0/239E028
+2023-09-19 21:02:48.588 CEST [26740] LOG:  début du checkpoint : time
+2023-09-19 21:02:53.469 CEST [26740] LOG:  checkpoint complete: wrote 36 buffers (0.2%); 0 WAL file(s) added, 0 removed, 0 recycled; write=4.730 s, sync=0.032 s, total=4.882 s; sync files=34, longest=0.003 s, average=0.001 s; distance=141 kB, estimate=4347 kB; lsn=0/23C1838, redo lsn=0/23C1800
+2023-09-19 21:22:48.495 CEST [26740] LOG:  début du checkpoint : time
+2023-09-19 21:22:53.100 CEST [26740] LOG:  checkpoint complete: wrote 42 buffers (0.3%); 0 WAL file(s) added, 0 removed, 0 recycled; write=4.520 s, sync=0.040 s, total=4.605 s; sync files=38, longest=0.002 s, average=0.002 s; distance=162 kB, estimate=3929 kB; lsn=0/23EA248, redo lsn=0/23EA210
+2023-09-19 21:37:48.118 CEST [26740] LOG:  début du checkpoint : time
+2023-09-19 21:37:52.998 CEST [26740] LOG:  checkpoint complete: wrote 45 buffers (0.3%); 0 WAL file(s) added, 0 removed, 0 recycled; write=4.834 s, sync=0.031 s, total=4.880 s; sync files=42, longest=0.002 s, average=0.001 s; distance=175 kB, estimate=3553 kB; lsn=0/2415EB0, redo lsn=0/2415E78
+2023-09-19 21:52:48.040 CEST [26740] LOG:  début du checkpoint : time
+2023-09-19 21:52:53.571 CEST [26740] LOG:  checkpoint complete: wrote 51 buffers (0.3%); 0 WAL file(s) added, 0 removed, 0 recycled; write=5.472 s, sync=0.045 s, total=5.531 s; sync files=39, longest=0.006 s, average=0.002 s; distance=193 kB, estimate=3217 kB; lsn=0/24465C0, redo lsn=0/2446588
+2023-09-19 21:57:48.575 CEST [26740] LOG:  début du checkpoint : time
+2023-09-19 21:57:49.809 CEST [26740] LOG:  checkpoint complete: wrote 12 buffers (0.1%); 0 WAL file(s) added, 0 removed, 0 recycled; write=1.203 s, sync=0.017 s, total=1.235 s; sync files=10, longest=0.006 s, average=0.002 s; distance=28 kB, estimate=2898 kB; lsn=0/244D920, redo lsn=0/244D8E8
