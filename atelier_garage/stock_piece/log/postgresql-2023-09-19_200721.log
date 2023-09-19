@@ -1,0 +1,23 @@
+2023-09-19 20:07:21.809 CEST [30172] LOG:  le système de bases de données a été arrêté à 2023-09-19 20:07:10 CEST
+2023-09-19 20:09:33.431 CEST [23000] FATAL:  authentification par mot de passe échouée pour l'utilisateur  « postgres »
+2023-09-19 20:09:33.431 CEST [23000] DÉTAIL:  Connection matched file "C:/Users/fabie/Garage_V_PARROT/GarageVParrot/atelier_garage/stock_piece/pg_hba.conf" line 115: "host    all             all             127.0.0.1/32            scram-sha-256"
+2023-09-19 20:11:58.123 CEST [20824] FATAL:  authentification par mot de passe échouée pour l'utilisateur  « postgres »
+2023-09-19 20:11:58.123 CEST [20824] DÉTAIL:  Connection matched file "C:/Users/fabie/Garage_V_PARROT/GarageVParrot/atelier_garage/stock_piece/pg_hba.conf" line 115: "host    all             all             127.0.0.1/32            scram-sha-256"
+2023-09-19 20:12:21.825 CEST [26740] LOG:  début du checkpoint : time
+2023-09-19 20:12:26.911 CEST [2720] ERREUR:  la base de donnÃ©es Â« vparrot Â» existe dÃ©jÃ 
+2023-09-19 20:12:26.911 CEST [2720] INSTRUCTION :  CREATE DATABASE "vparrot"
+2023-09-19 20:12:48.678 CEST [26740] LOG:  checkpoint complete: wrote 1146 buffers (7.0%); 1 WAL file(s) added, 0 removed, 0 recycled; write=26.397 s, sync=0.317 s, total=26.856 s; sync files=330, longest=0.029 s, average=0.001 s; distance=9408 kB, estimate=9408 kB; lsn=0/1E9F300, redo lsn=0/1E9EE30
+2023-09-19 20:12:48.707 CEST [26740] LOG:  début du checkpoint : immediate force wait
+2023-09-19 20:12:48.731 CEST [26740] LOG:  checkpoint complete: wrote 1 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.002 s, sync=0.001 s, total=0.024 s; sync files=1, longest=0.001 s, average=0.001 s; distance=1 kB, estimate=8468 kB; lsn=0/1E9F3B0, redo lsn=0/1E9F378
+2023-09-19 20:17:48.746 CEST [26740] LOG:  début du checkpoint : time
+2023-09-19 20:19:34.831 CEST [26740] LOG:  checkpoint complete: wrote 968 buffers (5.9%); 0 WAL file(s) added, 0 removed, 1 recycled; write=105.847 s, sync=0.218 s, total=106.086 s; sync files=300, longest=0.013 s, average=0.001 s; distance=4568 kB, estimate=8078 kB; lsn=0/23155E0, redo lsn=0/23155A8
+2023-09-19 20:37:48.890 CEST [26740] LOG:  début du checkpoint : time
+2023-09-19 20:37:50.133 CEST [26740] LOG:  checkpoint complete: wrote 11 buffers (0.1%); 0 WAL file(s) added, 0 removed, 0 recycled; write=1.223 s, sync=0.005 s, total=1.243 s; sync files=3, longest=0.002 s, average=0.002 s; distance=39 kB, estimate=7274 kB; lsn=0/231F450, redo lsn=0/231F418
+2023-09-19 20:42:48.140 CEST [26740] LOG:  début du checkpoint : time
+2023-09-19 20:42:50.256 CEST [26740] LOG:  checkpoint complete: wrote 19 buffers (0.1%); 0 WAL file(s) added, 0 removed, 0 recycled; write=2.091 s, sync=0.007 s, total=2.117 s; sync files=7, longest=0.002 s, average=0.001 s; distance=57 kB, estimate=6552 kB; lsn=0/232DC18, redo lsn=0/232DBE0
+2023-09-19 20:47:48.271 CEST [26740] LOG:  début du checkpoint : time
+2023-09-19 20:47:57.312 CEST [26740] LOG:  checkpoint complete: wrote 83 buffers (0.5%); 0 WAL file(s) added, 0 removed, 0 recycled; write=8.986 s, sync=0.041 s, total=9.042 s; sync files=63, longest=0.002 s, average=0.001 s; distance=275 kB, estimate=5924 kB; lsn=0/23728F8, redo lsn=0/23728C0
+2023-09-19 20:52:48.316 CEST [26740] LOG:  début du checkpoint : time
+2023-09-19 20:52:52.431 CEST [26740] LOG:  checkpoint complete: wrote 38 buffers (0.2%); 0 WAL file(s) added, 0 removed, 0 recycled; write=4.074 s, sync=0.030 s, total=4.116 s; sync files=36, longest=0.006 s, average=0.001 s; distance=148 kB, estimate=5347 kB; lsn=0/2397CB8, redo lsn=0/2397C80
+2023-09-19 20:57:48.447 CEST [26740] LOG:  début du checkpoint : time
+2023-09-19 20:57:49.575 CEST [26740] LOG:  checkpoint complete: wrote 11 buffers (0.1%); 0 WAL file(s) added, 0 removed, 0 recycled; write=1.101 s, sync=0.011 s, total=1.129 s; sync files=11, longest=0.002 s, average=0.001 s; distance=24 kB, estimate=4815 kB; lsn=0/239E060, redo lsn=0/239E028
