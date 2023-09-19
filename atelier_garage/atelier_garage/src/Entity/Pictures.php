@@ -17,11 +17,12 @@ class Pictures
     #[ORM\Column]
     private ?int $IdPicture = null;
 
-    #[ORM\Column(type: Types::OBJECT)]
-    private ?object $Picture = null;
+    #[ORM\Column(type: Types::BLOB)]
+    private $Picture = null;
 
-    #[ORM\Column]
-    private ?int $IdCar = null;
+    #[ORM\ManyToOne(inversedBy: 'IdPhoto')]
+    #[ORM\JoinColumn(nullable: false)]
+    private ?Cars $IdCar = null;
 
     public function getId(): ?int
     {
@@ -40,24 +41,24 @@ class Pictures
         return $this;
     }
 
-    public function getPicture(): ?object
+    public function getPicture()
     {
         return $this->Picture;
     }
 
-    public function setPicture(object $Picture): static
+    public function setPicture($Picture): static
     {
         $this->Picture = $Picture;
 
         return $this;
     }
 
-    public function getIdCar(): ?int
+    public function getIdCar(): ?Cars
     {
         return $this->IdCar;
     }
 
-    public function setIdCar(int $IdCar): static
+    public function setIdCar(?Cars $IdCar): static
     {
         $this->IdCar = $IdCar;
 

@@ -17,16 +17,16 @@ class Users
     private ?string $IdUser = null;
 
     #[ORM\Column(length: 50)]
-    private ?string $password = null;
+    private ?string $Password = null;
+
+    #[ORM\Column(length: 20)]
+    private ?string $NameUser = null;
+
+    #[ORM\Column(length: 20, nullable: true)]
+    private ?string $FirstNameUser = null;
 
     #[ORM\Column]
-    private ?int $LvlPerm = null;
-
-    #[ORM\Column(length: 30)]
-    private ?string $UserName = null;
-
-    #[ORM\Column(length: 30)]
-    private ?string $UserFirstName = null;
+    private ?int $LvlAction = null;
 
     public function getId(): ?int
     {
@@ -47,48 +47,48 @@ class Users
 
     public function getPassword(): ?string
     {
-        return $this->password;
+        return $this->Password;
     }
 
-    public function setPassword(string $password): static
+    public function setPassword(string $Password): static
     {
-        $this->password = $password;
+        $this->Password = $Password;
 
         return $this;
     }
 
-    public function getLvlPerm(): ?int
+    public function getNameUser(): ?string
     {
-        return $this->LvlPerm;
+        return $this->NameUser;
     }
 
-    public function setLvlPerm(int $LvlPerm): static
+    public function setNameUser(string $NameUser): static
     {
-        $this->LvlPerm = $LvlPerm;
+        $this->NameUser = $NameUser;
 
         return $this;
     }
 
-    public function getUserName(): ?string
+    public function getFirstNameUser(): ?string
     {
-        return $this->UserName;
+        return $this->FirstNameUser;
     }
 
-    public function setUserName(string $UserName): static
+    public function setFirstNameUser(?string $FirstNameUser): static
     {
-        $this->UserName = $UserName;
+        $this->FirstNameUser = $FirstNameUser;
 
         return $this;
     }
 
-    public function getUserFirstName(): ?string
+    public function getLvlAction(): ?int
     {
-        return $this->UserFirstName;
+        return $this->LvlAction;
     }
 
-    public function setUserFirstName(string $UserFirstName): static
+    public function setLvlAction(int $LvlAction): static
     {
-        $this->UserFirstName = $UserFirstName;
+        $this->LvlAction = $LvlAction;
 
         return $this;
     }

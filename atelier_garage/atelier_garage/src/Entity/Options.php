@@ -3,6 +3,8 @@
 namespace App\Entity;
 
 use App\Repository\OptionsRepository;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 
 #[ORM\Entity(repositoryClass: OptionsRepository::class)]
@@ -21,6 +23,14 @@ class Options
 
     #[ORM\Column(length: 200, nullable: true)]
     private ?string $DescripOption = null;
+
+    #[ORM\ManyToMany(targetEntity: Cars::class, inversedBy: 'IdOption')]
+    private Collection $IdCar;
+
+    public function __construct()
+    {
+        $this->IdCar = new ArrayCollection();
+    }
 
     public function getId(): ?int
     {
@@ -59,6 +69,30 @@ class Options
     public function setDescripOption(?string $DescripOption): static
     {
         $this->DescripOption = $DescripOption;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection<int, Cars>
+     */
+    public function getIdCar(): Collection
+    {
+        return $this->IdCar;
+    }
+
+    public function addIdCar(Cars $idCar): static
+    {
+        if (!$this->IdCar->contains($idCar)) {
+            $this->IdCar->add($idCar);
+        }
+
+        return $this;
+    }
+
+    public function removeIdCar(Cars $idCar): static
+    {
+        $this->IdCar->removeElement($idCar);
 
         return $this;
     }

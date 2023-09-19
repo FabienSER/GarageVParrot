@@ -14,7 +14,7 @@ class OpenHours
     private ?int $id = null;
 
     #[ORM\Column]
-    private ?int $IdDays = null;
+    private ?int $IdDay = null;
 
     #[ORM\Column(length: 5, nullable: true)]
     private ?string $StartMorning = null;
@@ -28,19 +28,22 @@ class OpenHours
     #[ORM\Column(length: 5, nullable: true)]
     private ?string $EndAfternoon = null;
 
+    #[ORM\Column(length: 15)]
+    private ?string $LabelDay = null;
+
     public function getId(): ?int
     {
         return $this->id;
     }
 
-    public function getIdDays(): ?int
+    public function getIdDay(): ?int
     {
-        return $this->IdDays;
+        return $this->IdDay;
     }
 
-    public function setIdDays(int $IdDays): static
+    public function setIdDay(int $IdDay): static
     {
-        $this->IdDays = $IdDays;
+        $this->IdDay = $IdDay;
 
         return $this;
     }
@@ -89,6 +92,18 @@ class OpenHours
     public function setEndAfternoon(?string $EndAfternoon): static
     {
         $this->EndAfternoon = $EndAfternoon;
+
+        return $this;
+    }
+
+    public function getLabelDay(): ?string
+    {
+        return $this->LabelDay;
+    }
+
+    public function setLabelDay(string $LabelDay): static
+    {
+        $this->LabelDay = $LabelDay;
 
         return $this;
     }

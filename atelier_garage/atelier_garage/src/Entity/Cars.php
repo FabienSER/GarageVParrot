@@ -25,17 +25,17 @@ class Cars
     #[ORM\Column(length: 30)]
     private ?string $ModelCar = null;
 
-    #[ORM\Column(length: 10)]
+    #[ORM\Column]
+    private ?int $PriceCar = null;
+
+    #[ORM\Column(length: 15)]
     private ?string $TypeCar = null;
 
     #[ORM\Column]
-    private ?int $KilometrageCar = null;
+    private ?int $Kilometer = null;
 
     #[ORM\Column(type: Types::DATE_MUTABLE)]
     private ?\DateTimeInterface $DateCirculCar = null;
-
-    #[ORM\Column(length: 10, nullable: true)]
-    private ?string $ColorCar = null;
 
     #[ORM\Column]
     private ?int $NbDoorCar = null;
@@ -43,38 +43,47 @@ class Cars
     #[ORM\Column]
     private ?int $NbPlaceCar = null;
 
+    #[ORM\Column(length: 15, nullable: true)]
+    private ?string $ColorCar = null;
+
     #[ORM\Column(nullable: true)]
     private ?float $UtilityAreaCar = null;
 
     #[ORM\Column]
-    private ?int $PriceCar = null;
-
-    #[ORM\Column(nullable: true)]
-    private ?int $CO2Car = null;
-
-    #[ORM\Column]
     private ?int $PowerCar = null;
 
-    #[ORM\Column(length: 30)]
+    #[ORM\Column(nullable: true)]
+    private ?int $CO2 = null;
+
+    #[ORM\Column(length: 20)]
     private ?string $EnergyCar = null;
 
-    #[ORM\Column(nullable: true)]
-    private ?int $AutonomyCar = null;
+    #[ORM\Column(length: 15, nullable: true)]
+    private ?string $AutonomyCar = null;
 
     #[ORM\Column(nullable: true)]
-    private ?float $Consum100 = null;
+    private ?float $Conso100 = null;
+
+    #[ORM\Column]
+    private ?bool $BoitCar = null;
 
     #[ORM\Column(length: 255, nullable: true)]
     private ?string $DescripCar = null;
 
-    #[ORM\Column]
-    private ?bool $BoiteCar = null;
+    #[ORM\OneToMany(mappedBy: 'IdCar', targetEntity: Pictures::class, orphanRemoval: true)]
+    private Collection $IdPhoto;
 
-    #[ORM\ManyToOne(inversedBy: 'IdCar')]
-    private ?Picture $IdCar2 = null;
+    #[ORM\ManyToMany(targetEntity: Options::class, mappedBy: 'IdCar')]
+    private Collection $IdOption;
 
-    #[ORM\Column]
-    private ?int $StateCar = null;
+    #[ORM\Column(nullable: true)]
+    private ?int $IdPhotoPrinc = null;
+
+    public function __construct()
+    {
+        $this->IdPhoto = new ArrayCollection();
+        $this->IdOption = new ArrayCollection();
+    }
 
     public function getId(): ?int
     {
@@ -117,6 +126,18 @@ class Cars
         return $this;
     }
 
+    public function getPriceCar(): ?int
+    {
+        return $this->PriceCar;
+    }
+
+    public function setPriceCar(int $PriceCar): static
+    {
+        $this->PriceCar = $PriceCar;
+
+        return $this;
+    }
+
     public function getTypeCar(): ?string
     {
         return $this->TypeCar;
@@ -129,14 +150,14 @@ class Cars
         return $this;
     }
 
-    public function getKilometrageCar(): ?int
+    public function getKilometer(): ?int
     {
-        return $this->KilometrageCar;
+        return $this->Kilometer;
     }
 
-    public function setKilometrageCar(int $KilometrageCar): static
+    public function setKilometer(int $Kilometer): static
     {
-        $this->KilometrageCar = $KilometrageCar;
+        $this->Kilometer = $Kilometer;
 
         return $this;
     }
@@ -149,18 +170,6 @@ class Cars
     public function setDateCirculCar(\DateTimeInterface $DateCirculCar): static
     {
         $this->DateCirculCar = $DateCirculCar;
-
-        return $this;
-    }
-
-    public function getColorCar(): ?string
-    {
-        return $this->ColorCar;
-    }
-
-    public function setColorCar(?string $ColorCar): static
-    {
-        $this->ColorCar = $ColorCar;
 
         return $this;
     }
@@ -189,6 +198,18 @@ class Cars
         return $this;
     }
 
+    public function getColorCar(): ?string
+    {
+        return $this->ColorCar;
+    }
+
+    public function setColorCar(?string $ColorCar): static
+    {
+        $this->ColorCar = $ColorCar;
+
+        return $this;
+    }
+
     public function getUtilityAreaCar(): ?float
     {
         return $this->UtilityAreaCar;
@@ -197,30 +218,6 @@ class Cars
     public function setUtilityAreaCar(?float $UtilityAreaCar): static
     {
         $this->UtilityAreaCar = $UtilityAreaCar;
-
-        return $this;
-    }
-
-    public function getPriceCar(): ?int
-    {
-        return $this->PriceCar;
-    }
-
-    public function setPriceCar(int $PriceCar): static
-    {
-        $this->PriceCar = $PriceCar;
-
-        return $this;
-    }
-
-    public function getCO2Car(): ?int
-    {
-        return $this->CO2Car;
-    }
-
-    public function setCO2Car(?int $CO2Car): static
-    {
-        $this->CO2Car = $CO2Car;
 
         return $this;
     }
@@ -237,6 +234,18 @@ class Cars
         return $this;
     }
 
+    public function getCO2(): ?int
+    {
+        return $this->CO2;
+    }
+
+    public function setCO2(?int $CO2): static
+    {
+        $this->CO2 = $CO2;
+
+        return $this;
+    }
+
     public function getEnergyCar(): ?string
     {
         return $this->EnergyCar;
@@ -249,26 +258,38 @@ class Cars
         return $this;
     }
 
-    public function getAutonomyCar(): ?int
+    public function getAutonomyCar(): ?string
     {
         return $this->AutonomyCar;
     }
 
-    public function setAutonomyCar(?int $AutonomyCar): static
+    public function setAutonomyCar(?string $AutonomyCar): static
     {
         $this->AutonomyCar = $AutonomyCar;
 
         return $this;
     }
 
-    public function getConsum100(): ?float
+    public function getConso100(): ?float
     {
-        return $this->Consum100;
+        return $this->Conso100;
     }
 
-    public function setConsum100(?float $Consum100): static
+    public function setConso100(?float $Conso100): static
     {
-        $this->Consum100 = $Consum100;
+        $this->Conso100 = $Conso100;
+
+        return $this;
+    }
+
+    public function isBoitCar(): ?bool
+    {
+        return $this->BoitCar;
+    }
+
+    public function setBoitCar(bool $BoitCar): static
+    {
+        $this->BoitCar = $BoitCar;
 
         return $this;
     }
@@ -285,38 +306,71 @@ class Cars
         return $this;
     }
 
-    public function isBoiteCar(): ?bool
+    /**
+     * @return Collection<int, Pictures>
+     */
+    public function getIdPhoto(): Collection
     {
-        return $this->BoiteCar;
+        return $this->IdPhoto;
     }
 
-    public function setBoiteCar(bool $BoiteCar): static
+    public function addIdPhoto(Pictures $idPhoto): static
     {
-        $this->BoiteCar = $BoiteCar;
+        if (!$this->IdPhoto->contains($idPhoto)) {
+            $this->IdPhoto->add($idPhoto);
+            $idPhoto->setIdCar($this);
+        }
 
         return $this;
     }
 
-    public function getIdCar2(): ?Picture
+    public function removeIdPhoto(Pictures $idPhoto): static
     {
-        return $this->IdCar2;
-    }
-
-    public function setIdCar2(?Picture $IdCar2): static
-    {
-        $this->IdCar2 = $IdCar2;
+        if ($this->IdPhoto->removeElement($idPhoto)) {
+            // set the owning side to null (unless already changed)
+            if ($idPhoto->getIdCar() === $this) {
+                $idPhoto->setIdCar(null);
+            }
+        }
 
         return $this;
     }
 
-    public function getStateCar(): ?int
+    /**
+     * @return Collection<int, Options>
+     */
+    public function getIdOption(): Collection
     {
-        return $this->StateCar;
+        return $this->IdOption;
     }
 
-    public function setStateCar(int $StateCar): static
+    public function addIdOption(Options $idOption): static
     {
-        $this->StateCar = $StateCar;
+        if (!$this->IdOption->contains($idOption)) {
+            $this->IdOption->add($idOption);
+            $idOption->addIdCar($this);
+        }
+
+        return $this;
+    }
+
+    public function removeIdOption(Options $idOption): static
+    {
+        if ($this->IdOption->removeElement($idOption)) {
+            $idOption->removeIdCar($this);
+        }
+
+        return $this;
+    }
+
+    public function getIdPhotoPrinc(): ?int
+    {
+        return $this->IdPhotoPrinc;
+    }
+
+    public function setIdPhotoPrinc(?int $IdPhotoPrinc): static
+    {
+        $this->IdPhotoPrinc = $IdPhotoPrinc;
 
         return $this;
     }

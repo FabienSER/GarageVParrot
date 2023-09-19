@@ -31,3 +31,49 @@
 2023-09-19 21:52:53.571 CEST [26740] LOG:  checkpoint complete: wrote 51 buffers (0.3%); 0 WAL file(s) added, 0 removed, 0 recycled; write=5.472 s, sync=0.045 s, total=5.531 s; sync files=39, longest=0.006 s, average=0.002 s; distance=193 kB, estimate=3217 kB; lsn=0/24465C0, redo lsn=0/2446588
 2023-09-19 21:57:48.575 CEST [26740] LOG:  d�but du checkpoint : time
 2023-09-19 21:57:49.809 CEST [26740] LOG:  checkpoint complete: wrote 12 buffers (0.1%); 0 WAL file(s) added, 0 removed, 0 recycled; write=1.203 s, sync=0.017 s, total=1.235 s; sync files=10, longest=0.006 s, average=0.002 s; distance=28 kB, estimate=2898 kB; lsn=0/244D920, redo lsn=0/244D8E8
+2023-09-19 22:07:48.818 CEST [26740] LOG:  d�but du checkpoint : time
+2023-09-19 22:07:52.372 CEST [26740] LOG:  checkpoint complete: wrote 33 buffers (0.2%); 0 WAL file(s) added, 0 removed, 0 recycled; write=3.499 s, sync=0.039 s, total=3.555 s; sync files=31, longest=0.006 s, average=0.002 s; distance=134 kB, estimate=2622 kB; lsn=0/246F128, redo lsn=0/246F0F0
+2023-09-19 22:22:48.399 CEST [26740] LOG:  d�but du checkpoint : time
+2023-09-19 22:22:49.192 CEST [26740] LOG:  checkpoint complete: wrote 8 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.768 s, sync=0.009 s, total=0.794 s; sync files=8, longest=0.002 s, average=0.002 s; distance=26 kB, estimate=2362 kB; lsn=0/2475B48, redo lsn=0/2475B10
+2023-09-19 22:27:48.200 CEST [26740] LOG:  d�but du checkpoint : time
+2023-09-19 22:27:52.469 CEST [26740] LOG:  checkpoint complete: wrote 39 buffers (0.2%); 0 WAL file(s) added, 0 removed, 0 recycled; write=4.182 s, sync=0.042 s, total=4.269 s; sync files=34, longest=0.006 s, average=0.002 s; distance=167 kB, estimate=2143 kB; lsn=0/249FAE0, redo lsn=0/249FAA8
+2023-09-19 22:38:45.896 CEST [1460] ERREUR:  la contrainte « fk_95c71d147a37632e » de la relation « cars » n'existe pas
+2023-09-19 22:38:45.896 CEST [1460] INSTRUCTION :  ALTER TABLE cars DROP CONSTRAINT fk_95c71d147a37632e
+2023-09-19 22:39:04.652 CEST [29164] ERREUR:  la contrainte « fk_95c71d147a37632e » de la relation « cars » n'existe pas
+2023-09-19 22:39:04.652 CEST [29164] INSTRUCTION :  ALTER TABLE cars DROP CONSTRAINT fk_95c71d147a37632e
+2023-09-19 22:40:02.386 CEST [8892] ERREUR:  la contrainte « fk_95c71d147a37632e » de la relation « cars » n'existe pas
+2023-09-19 22:40:02.386 CEST [8892] INSTRUCTION :  ALTER TABLE cars DROP CONSTRAINT fk_95c71d147a37632e
+2023-09-19 22:42:48.491 CEST [26740] LOG:  d�but du checkpoint : time
+2023-09-19 22:42:50.503 CEST [26740] LOG:  checkpoint complete: wrote 19 buffers (0.1%); 0 WAL file(s) added, 0 removed, 0 recycled; write=1.968 s, sync=0.022 s, total=2.012 s; sync files=16, longest=0.006 s, average=0.002 s; distance=80 kB, estimate=1937 kB; lsn=0/24B3C90, redo lsn=0/24B3C58
+2023-09-19 22:46:00.274 CEST [22648] ERREUR:  la contrainte « fk_95c71d147a37632e » de la relation « cars » n'existe pas
+2023-09-19 22:46:00.274 CEST [22648] INSTRUCTION :  ALTER TABLE cars DROP CONSTRAINT fk_95c71d147a37632e
+2023-09-19 22:46:50.560 CEST [31924] ERREUR:  la contrainte « fk_95c71d147a37632e » de la relation « cars » n'existe pas
+2023-09-19 22:46:50.560 CEST [31924] INSTRUCTION :  ALTER TABLE cars DROP CONSTRAINT fk_95c71d147a37632e
+2023-09-19 22:47:48.513 CEST [26740] LOG:  d�but du checkpoint : time
+2023-09-19 22:47:48.529 CEST [26740] LOG:  checkpoint complete: wrote 1 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.002 s, sync=0.002 s, total=0.016 s; sync files=1, longest=0.002 s, average=0.002 s; distance=0 kB, estimate=1743 kB; lsn=0/24B3E98, redo lsn=0/24B3E60
+2023-09-19 22:49:44.069 CEST [24608] ERREUR:  n'a pas pu supprimer table cars car d'autres objets en dépendent
+2023-09-19 22:49:44.069 CEST [24608] DÉTAIL:  contrainte fk_8167152a8702f506 sur table options_cars dépend de table cars
+2023-09-19 22:49:44.069 CEST [24608] ASTUCE :  Utilisez DROP ... CASCADE pour supprimer aussi les objets dépendants.
+2023-09-19 22:49:44.069 CEST [24608] INSTRUCTION :  DROP TABLE IF EXISTS public.cars;
+2023-09-19 22:52:48.533 CEST [26740] LOG:  d�but du checkpoint : time
+2023-09-19 22:52:51.831 CEST [26740] LOG:  checkpoint complete: wrote 30 buffers (0.2%); 0 WAL file(s) added, 0 removed, 0 recycled; write=3.255 s, sync=0.027 s, total=3.299 s; sync files=18, longest=0.006 s, average=0.002 s; distance=138 kB, estimate=1582 kB; lsn=0/24D6798, redo lsn=0/24D6760
+2023-09-19 22:57:48.835 CEST [26740] LOG:  d�but du checkpoint : time
+2023-09-19 22:57:50.192 CEST [26740] LOG:  checkpoint complete: wrote 13 buffers (0.1%); 0 WAL file(s) added, 0 removed, 0 recycled; write=1.328 s, sync=0.016 s, total=1.358 s; sync files=11, longest=0.006 s, average=0.002 s; distance=52 kB, estimate=1429 kB; lsn=0/24E3850, redo lsn=0/24E3818
+2023-09-19 22:58:37.192 CEST [33044] ERREUR:  la relation « cars » n'existe pas
+2023-09-19 22:58:37.192 CEST [33044] INSTRUCTION :  ALTER TABLE cars DROP CONSTRAINT fk_95c71d147a37632e
+2023-09-19 23:03:29.116 CEST [32828] ERREUR:  la relation « cars » n'existe pas
+2023-09-19 23:03:29.116 CEST [32828] INSTRUCTION :  ALTER TABLE cars DROP CONSTRAINT fk_95c71d147a37632e
+2023-09-19 23:04:33.666 CEST [26740] LOG:  d�but du checkpoint : immediate force wait
+2023-09-19 23:04:33.789 CEST [26740] LOG:  checkpoint complete: wrote 1 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.046 s, sync=0.002 s, total=0.123 s; sync files=1, longest=0.002 s, average=0.002 s; distance=1 kB, estimate=1286 kB; lsn=0/24E3E40, redo lsn=0/24E3E08
+2023-09-19 23:09:33.870 CEST [26740] LOG:  d�but du checkpoint : time
+2023-09-19 23:11:20.474 CEST [26740] LOG:  checkpoint complete: wrote 968 buffers (5.9%); 0 WAL file(s) added, 0 removed, 0 recycled; write=106.352 s, sync=0.197 s, total=106.605 s; sync files=300, longest=0.006 s, average=0.001 s; distance=4569 kB, estimate=4569 kB; lsn=0/295A538, redo lsn=0/295A500
+2023-09-19 23:12:45.410 CEST [31540] ERREUR:  la contrainte « fk_95c71d147a37632e » de la relation « cars » n'existe pas
+2023-09-19 23:12:45.410 CEST [31540] INSTRUCTION :  ALTER TABLE cars DROP CONSTRAINT fk_95c71d147a37632e
+2023-09-19 23:14:33.568 CEST [26740] LOG:  d�but du checkpoint : time
+2023-09-19 23:14:45.937 CEST [26740] LOG:  checkpoint complete: wrote 113 buffers (0.7%); 0 WAL file(s) added, 0 removed, 0 recycled; write=12.273 s, sync=0.068 s, total=12.369 s; sync files=101, longest=0.006 s, average=0.001 s; distance=591 kB, estimate=4171 kB; lsn=0/29EE1E8, redo lsn=0/29EE178
+2023-09-19 23:19:33.948 CEST [26740] LOG:  d�but du checkpoint : time
+2023-09-19 23:19:34.113 CEST [26740] LOG:  checkpoint complete: wrote 1 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.114 s, sync=0.003 s, total=0.165 s; sync files=1, longest=0.003 s, average=0.003 s; distance=7 kB, estimate=3755 kB; lsn=0/29EFFD0, redo lsn=0/29EFF98
+2023-09-19 23:39:33.162 CEST [26740] LOG:  d�but du checkpoint : time
+2023-09-19 23:39:39.681 CEST [26740] LOG:  checkpoint complete: wrote 60 buffers (0.4%); 0 WAL file(s) added, 0 removed, 0 recycled; write=6.459 s, sync=0.044 s, total=6.519 s; sync files=55, longest=0.007 s, average=0.001 s; distance=241 kB, estimate=3404 kB; lsn=0/2A2C7A0, redo lsn=0/2A2C768
+2023-09-19 23:54:33.710 CEST [26740] LOG:  d�but du checkpoint : time
+2023-09-19 23:54:37.692 CEST [26740] LOG:  checkpoint complete: wrote 37 buffers (0.2%); 0 WAL file(s) added, 0 removed, 0 recycled; write=3.934 s, sync=0.038 s, total=3.983 s; sync files=34, longest=0.003 s, average=0.002 s; distance=152 kB, estimate=3078 kB; lsn=0/2A52B08, redo lsn=0/2A52AD0
