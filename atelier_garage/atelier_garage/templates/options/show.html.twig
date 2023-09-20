@@ -1,0 +1,34 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Options{% endblock %}
+
+{% block body %}
+    <h1>Options</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ option.id }}</td>
+            </tr>
+            <tr>
+                <th>IdOption</th>
+                <td>{{ option.IdOption }}</td>
+            </tr>
+            <tr>
+                <th>NameOption</th>
+                <td>{{ option.NameOption }}</td>
+            </tr>
+            <tr>
+                <th>DescripOption</th>
+                <td>{{ option.DescripOption }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_options_index') }}">back to list</a>
+
+    <a href="{{ path('app_options_edit', {'id': option.id}) }}">edit</a>
+
+    {{ include('options/_delete_form.html.twig') }}
+{% endblock %}

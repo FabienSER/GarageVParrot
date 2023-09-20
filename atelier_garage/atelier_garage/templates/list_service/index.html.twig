@@ -1,0 +1,41 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}ListService index{% endblock %}
+
+{% block body %}
+    <h1>ListService index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>IdService</th>
+                <th>NameService</th>
+                <th>DescripService</th>
+                <th>StateService</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for list_service in list_services %}
+            <tr>
+                <td>{{ list_service.id }}</td>
+                <td>{{ list_service.IdService }}</td>
+                <td>{{ list_service.NameService }}</td>
+                <td>{{ list_service.DescripService }}</td>
+                <td>{{ list_service.StateService ? 'Yes' : 'No' }}</td>
+                <td>
+                    <a href="{{ path('app_list_service_show', {'id': list_service.id}) }}">show</a>
+                    <a href="{{ path('app_list_service_edit', {'id': list_service.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="6">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_list_service_new') }}">Create new</a>
+{% endblock %}

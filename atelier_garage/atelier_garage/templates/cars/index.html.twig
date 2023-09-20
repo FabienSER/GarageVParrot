@@ -1,0 +1,71 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Cars index{% endblock %}
+
+{% block body %}
+    <h1>Cars index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>IdCar</th>
+                <th>MarkCar</th>
+                <th>ModelCar</th>
+                <th>PriceCar</th>
+                <th>TypeCar</th>
+                <th>Kilometer</th>
+                <th>DateCirculCar</th>
+                <th>NbDoorCar</th>
+                <th>NbPlaceCar</th>
+                <th>ColorCar</th>
+                <th>UtilityAreaCar</th>
+                <th>PowerCar</th>
+                <th>CO2</th>
+                <th>EnergyCar</th>
+                <th>AutonomyCar</th>
+                <th>Conso100</th>
+                <th>BoitCar</th>
+                <th>DescripCar</th>
+                <th>IdPhotoPrinc</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for car in cars %}
+            <tr>
+                <td>{{ car.id }}</td>
+                <td>{{ car.IdCar }}</td>
+                <td>{{ car.MarkCar }}</td>
+                <td>{{ car.ModelCar }}</td>
+                <td>{{ car.PriceCar }}</td>
+                <td>{{ car.TypeCar }}</td>
+                <td>{{ car.Kilometer }}</td>
+                <td>{{ car.DateCirculCar ? car.DateCirculCar|date('Y-m-d') : '' }}</td>
+                <td>{{ car.NbDoorCar }}</td>
+                <td>{{ car.NbPlaceCar }}</td>
+                <td>{{ car.ColorCar }}</td>
+                <td>{{ car.UtilityAreaCar }}</td>
+                <td>{{ car.PowerCar }}</td>
+                <td>{{ car.CO2 }}</td>
+                <td>{{ car.EnergyCar }}</td>
+                <td>{{ car.AutonomyCar }}</td>
+                <td>{{ car.Conso100 }}</td>
+                <td>{{ car.BoitCar ? 'Yes' : 'No' }}</td>
+                <td>{{ car.DescripCar }}</td>
+                <td>{{ car.IdPhotoPrinc }}</td>
+                <td>
+                    <a href="{{ path('app_cars_show', {'id': car.id}) }}">show</a>
+                    <a href="{{ path('app_cars_edit', {'id': car.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="21">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_cars_new') }}">Create new</a>
+{% endblock %}

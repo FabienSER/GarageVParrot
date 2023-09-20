@@ -1,6 +1,4 @@
 import Commentaire from "./Commentaire.js";
-import Carousel from "react-multi-carousel";
-import "react-multi-carousel/lib/styles.css";
 
 const responsive = {
   superLargeDesktop: {
@@ -29,7 +27,6 @@ export default function CarrouselCom(){
 
     let ComPrecedent;
     let NbElement = TabComment.length;
-    let Temp = NbElement;
     let [Nom, Comment, Note] = [' ',' ',0];
     
     // maximun de 10 slides de commentaires dans le carroussel

@@ -3,6 +3,7 @@ import MenuButton from "./CompteButton";
 import AvisButton from "./AvisButton";
 import { Menu } from 'react-ui';
 import "../style/MenuPrinc.css";
+import InfoButton from './InfoButton.js'
 
 export default function MenuPrinc({Direction, Format, Connect}){
     if (Direction === "Horizontal"){
@@ -10,6 +11,7 @@ export default function MenuPrinc({Direction, Format, Connect}){
             <div className="menuHContainer">
                 <AvisButton></AvisButton>
                 <VenteButton></VenteButton>
+                <InfoButton></InfoButton>
                 <MenuButton Connect={Connect}></MenuButton>
             </div>
         );

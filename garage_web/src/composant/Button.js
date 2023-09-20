@@ -1,7 +1,7 @@
 import React from 'react';
 import '../style/Button.css';
 
-const Button = ({Label,Color,Background,Hover}) => {
+const Button = ({Label,Color,Background,Hover, OnClick}) => {
   return (
     <button
       type="button"
@@ -19,6 +19,7 @@ const Button = ({Label,Color,Background,Hover}) => {
               borderColor: Color|| '#D94350',
               }
             }}
+      onClick={OnClick}
     >
       {Label}
     </button>

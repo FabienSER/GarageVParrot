@@ -1,0 +1,50 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}ListComment{% endblock %}
+
+{% block body %}
+    <h1>ListComment</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ list_comment.id }}</td>
+            </tr>
+            <tr>
+                <th>IdComment</th>
+                <td>{{ list_comment.IdComment }}</td>
+            </tr>
+            <tr>
+                <th>UserMailComment</th>
+                <td>{{ list_comment.UserMailComment }}</td>
+            </tr>
+            <tr>
+                <th>UserNameComment</th>
+                <td>{{ list_comment.UserNameComment }}</td>
+            </tr>
+            <tr>
+                <th>TextComment</th>
+                <td>{{ list_comment.TextComment }}</td>
+            </tr>
+            <tr>
+                <th>DateComment</th>
+                <td>{{ list_comment.DateComment ? list_comment.DateComment|date('Y-m-d') : '' }}</td>
+            </tr>
+            <tr>
+                <th>EvalComment</th>
+                <td>{{ list_comment.EvalComment }}</td>
+            </tr>
+            <tr>
+                <th>StateComment</th>
+                <td>{{ list_comment.StateComment }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_list_comment_index') }}">back to list</a>
+
+    <a href="{{ path('app_list_comment_edit', {'id': list_comment.id}) }}">edit</a>
+
+    {{ include('list_comment/_delete_form.html.twig') }}
+{% endblock %}

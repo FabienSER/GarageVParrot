@@ -1,0 +1,47 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}ListComment index{% endblock %}
+
+{% block body %}
+    <h1>ListComment index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>IdComment</th>
+                <th>UserMailComment</th>
+                <th>UserNameComment</th>
+                <th>TextComment</th>
+                <th>DateComment</th>
+                <th>EvalComment</th>
+                <th>StateComment</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for list_comment in list_comments %}
+            <tr>
+                <td>{{ list_comment.id }}</td>
+                <td>{{ list_comment.IdComment }}</td>
+                <td>{{ list_comment.UserMailComment }}</td>
+                <td>{{ list_comment.UserNameComment }}</td>
+                <td>{{ list_comment.TextComment }}</td>
+                <td>{{ list_comment.DateComment ? list_comment.DateComment|date('Y-m-d') : '' }}</td>
+                <td>{{ list_comment.EvalComment }}</td>
+                <td>{{ list_comment.StateComment }}</td>
+                <td>
+                    <a href="{{ path('app_list_comment_show', {'id': list_comment.id}) }}">show</a>
+                    <a href="{{ path('app_list_comment_edit', {'id': list_comment.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="9">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_list_comment_new') }}">Create new</a>
+{% endblock %}
