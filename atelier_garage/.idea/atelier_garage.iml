@@ -6,7 +6,7 @@
       <sourceFolder url="file://$MODULE_DIR$/tests" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/atelier_garage/spec" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/atelier_garage/src" isTestSource="false" packagePrefix="App\" />
-      <sourceFolder url="file://$MODULE_DIR$/atelier_garage/tests" isTestSource="true" packagePrefix="App\Tests\" />
+      <sourceFolder url="file://$MODULE_DIR$/atelier_garage/tests" isTestSource="true" />
       <excludeFolder url="file://$MODULE_DIR$/atelier_garage/vendor/composer" />
       <excludeFolder url="file://$MODULE_DIR$/atelier_garage/vendor/doctrine/annotations" />
       <excludeFolder url="file://$MODULE_DIR$/atelier_garage/vendor/doctrine/cache" />

@@ -1,24 +1,34 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom";
-import * as Reactui from 'react-ui';
-import * as Bootstrap from 'bootstrap';
 import Home from "./Pages/home";
+import PageConnexion from "./Pages/PageConnexion"; 
 import Horaire from "./composant/Horaire";
+import PageCommentaire from "./Pages/commentaires";
+
 import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
 
-import App from "./App";
+var Connect=false;
+var LvlTask=0;
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Home Direction={"Horizontal"} Connect={false}/>
+    element: <Home Direction={"Horizontal"} Connect={Connect}/>
   },
   {
     path: "/horaire",
-    element: <Horaire Direction={"Horizontal"} Connect={false}/>
+    element: <Horaire Direction={"Horizontal"} Connect={Connect}/>
+  },
+  {
+    path: "/connexion",
+    element: <PageConnexion Direction={"Horizontal"} Connect={Connect}/>
+  },
+  {
+    path: "/avis",
+    element: <PageCommentaire Direction={"Horizontal"} Connect={Connect}/>
   },
 ]);
 

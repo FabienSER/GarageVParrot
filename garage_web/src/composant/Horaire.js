@@ -1,7 +1,8 @@
 import "../style/Text.css";
 import React from "react";
 
- 
+//Ce composant de la page d'accueil sert aussi de page popup pour réafficher les horaires
+
 let TestHoraire = [["Lundi ","08:00 ","10:00 ","16:00 ","22:00 "],
                      ["Mardi ","08:00 ","10:00 ","16:00 ","22:00 "]];
 

@@ -9,7 +9,7 @@ export default function MenuPrinc({Direction, Format, Connect}){
     if (Direction === "Horizontal"){
         return(
             <div className="menuHContainer">
-                <AvisButton></AvisButton>
+                <AvisButton redir={false} ></AvisButton>
                 <VenteButton></VenteButton>
                 <InfoButton></InfoButton>
                 <MenuButton Connect={Connect}></MenuButton>
@@ -21,8 +21,10 @@ export default function MenuPrinc({Direction, Format, Connect}){
             <Menu>
                 <Menu.Button>Menu</Menu.Button>
                 <Menu.List>
+                <InfoButton></InfoButton>
                     <Menu.Item ><AvisButton/></Menu.Item>
                     <Menu.Item ><VenteButton/></Menu.Item>
+                    <Menu.Item ><InfoButton/></Menu.Item>
                     <Menu.Item ><MenuButton/></Menu.Item>
                 </Menu.List>
             </Menu>

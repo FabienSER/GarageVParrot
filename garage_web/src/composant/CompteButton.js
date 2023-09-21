@@ -1,11 +1,15 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Menu } from 'react-ui';
-import '../style/Button.css'
+import '../style/Button.css';
 
 // TODO : compléter la fieulle de style
 
 const MenuButton = ({Color,Background,Hover,Connect}) => {
   // TODO Sinon l'état de connxeion est non défini il faut considérer l'utilisateur comme non connecté
+
+  const popupConnexion = () => {
+    window.open('/connexion', "connexion", "popup, width=500, height=500" )
+  }
 
   if (Connect === false){  
     return(
@@ -27,20 +31,16 @@ const MenuButton = ({Color,Background,Hover,Connect}) => {
                     Compte
             </Menu.Button>
           <Menu.List>
-              <Menu.Item className="ButtonContainer"
-            style={{color:Color|| '#D94350', 
-                    background:Background||'#F2F2F2', 
-                    borderColor: Color|| '#D94350',
-                    ':hover':{
-                    color:Background|| '#F2F2F2', 
-                    background:Hover||'#262526'
+              <Menu.Item className="ButtonContainer" onClick={popupConnexion}
+            style={{color:Color, background:Background||'#F2F2F2', borderColor: Color|| '#D94350',
+                 ':hover':{
+                    color:Background|| '#F2F2F2', background:Hover||'#262526'
                     },
                     ':active':{
-                    color:Background|| '#D94350', 
-                    background:Color||'#F2F2F2', 
-                    borderColor: Color|| '#D94350',
+                    color:Background|| '#D94350', background:Color||'#F2F2F2', borderColor: Color|| '#D94350',
                     }
-                  }}>Connexion</Menu.Item>
+                  }}
+                  >Connexion</Menu.Item>
           </Menu.List>
       </Menu>
     );

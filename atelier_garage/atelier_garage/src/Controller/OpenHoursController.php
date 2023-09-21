@@ -14,10 +14,11 @@ use Symfony\Component\Routing\Annotation\Route;
 #[Route('/open/hours')]
 class OpenHoursController extends AbstractController
 {
+    /*Controller pour retour de tous les horaires de la semaine*/
     #[Route('/', name: 'app_open_hours_index', methods: ['GET'])]
-    public function index(OpenHoursRepository $openHoursRepository): Response
+    public function index(OpenHoursRepository $openHoursRepository): JsonResponse
     {
-        return $this->render('open_hours/index.html.twig', [
+        return $this->json( [
             'open_hours' => $openHoursRepository->findAll(),
         ]);
     }

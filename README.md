@@ -7,4 +7,8 @@ mail administrateur : garagevparrot748@gmail.com
 mp mail : SFpinpin77
 mp site : SFpinpin
 
+Le déploiement se déroulerait en trois phases :
+- en premier lieu, la base de données avec insertion des premières données.
+- Livraison du backend ensuite et contrôle de sont déploiement,
+- enfin le frontend.
 

@@ -1,0 +1,83 @@
+
+CREATE TABLE IF NOT EXISTS garagevparrot."Option"
+(
+    "idOption" integer,
+    "nomOption" char[10],
+    "descripOption" char[150]
+)
+
+CREATE TABLE IF NOT EXISTS garagevparrot."Voiture"
+(
+    "idVoit" integer,
+    "marqueVoit" char[15],
+    "modeleVoit" char[20],
+    "prixVoit" integer,
+    "KmVoit" integer,
+    "type" char[10],
+    "couleurVoit" char[10],
+    "carburantVoit" char[15],
+    "autonomieVoit" integer,
+    "litreO100" real,
+    "dateCirculVoit" date,
+    "puisFiscVoit" integer,
+    "CO2Voit" integer,
+    "BoiteV" Boolean,
+    "idPhoto" integer
+)
+
+CREATE TABLE IF NOT EXISTS garagevparrot."Photo"
+(
+    "idPhoto" integer,
+    "Photo" char[15],
+    "idVoit" integer
+)
+
+CREATE TABLE IF NOT EXISTS garagevparrot."ListeOption"
+(
+    "idOption" integer,
+    "idVoiture" integer
+)
+
+CREATE TABLE IF NOT EXISTS garagevparrot."Commentaire"
+(
+    "idComment" integer,
+    "NomComment" char[20],
+    "courrielComment" char[30],
+    "Comment" char[255],
+    "NoteComment" integer,
+    "DateComment" date,
+    "EtatComment" char[1]
+)
+
+CREATE TABLE IF NOT EXISTS garagevparrot."ListeService"
+(
+    "idservice" integer,
+    "NomService" char[15],
+    "DescripService" char[150],
+    "serviceActif" Char[1]
+)
+
+CREATE TABLE IF NOT EXISTS garagevparrot."Horaires"
+(
+    "idJour" integer,
+    "debMatin" char[5],
+    "finMatin" char[5],
+    "debApresmidi" char[5],
+    "finApresmidi" char[5],
+    "labelJour" char[10]
+)
+
+CREATE TABLE IF NOT EXISTS garagevparrot."Users"
+(
+    "iduser" integer,
+    "courriel" char[30],
+    "NomUser" char[20],
+    "prenomUser" char[20],
+    "motdepasse" char[50],
+    "NivDroit" char[1]
+)
+
+
+
+
+
